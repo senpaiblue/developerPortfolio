@@ -4,11 +4,13 @@ import { BackgroundGradientAnimation } from "./GradientBg";
 import { GlobeDemo } from "./GridGlobe";
 import { useState } from "react";
 import Lottie from "react-lottie";
-import animationData from '../../data/confetti.json'
+import animationData from "../../data/confetti.json";
 import MagicButton from "./MagicButton";
 import { IoCopyOutline } from "react-icons/io5";
 import { AuroraBackground } from "./AuroraBg";
 import { BackgroundBeams } from "./BackgroundBeams";
+import Shimmer from "./ShimmerButton";
+import Link from "next/link";
 
 export const BentoGrid = ({
   className,
@@ -50,11 +52,11 @@ export const BentoGridItem = ({
   titleClassName?: string;
   spareImg?: string;
 }) => {
-  const [copied, setcopied] = useState(false)
+  const [copied, setcopied] = useState(false);
   const handleCopy = () => {
-    navigator.clipboard.writeText('singhsakcham29@gmail.com')
-    setcopied(true)
-  }
+    navigator.clipboard.writeText("singhsakcham29@gmail.com");
+    setcopied(true);
+  };
   return (
     <div
       className={cn(
@@ -67,7 +69,7 @@ export const BentoGridItem = ({
           "linear-gradient(90deg, rgba(4,7,29,1) 0%, rgba(12,14,35,1) 100%)",
       }}
     >
-      <div className={`${id === 6 && 'flex justify-center'} h-full`}>
+      <div className={`${id === 6 && "flex justify-center"} h-full`}>
         <div className="w-full absolute h-full">
           {img && (
             <img
@@ -89,14 +91,14 @@ export const BentoGridItem = ({
               className={"object-cover,object-center w-full h-full"}
             />
           )}
-          
         </div>
         {id === 1 && (
           <AuroraBackground>
             <div className="absolute z-50 flex items-center justify-center text-white text-center font-bold" />
-            </AuroraBackground>
+          </AuroraBackground>
         )}
-        
+
+        {id === 5 &&  <BackgroundBeams />}
         {id === 6 && (
           <BackgroundGradientAnimation>
             <div className="absolute z-50 flex items-center justify-center text-white text-center font-bold" />
@@ -114,8 +116,21 @@ export const BentoGridItem = ({
           <div className="font-sans font-bold text-white text-lg lg:text-3xl max-w-96 z-10">
             {title}
           </div>
-          
-         { id === 5 && <BackgroundBeams />}
+
+          {id === 5 && (
+            <div className="mt-5 relative">
+             
+              <Link
+                className="relative w-full"
+                target="_blank"
+                href={
+                  "https://github.com/senpaiblue/Voice-Note"
+                }
+              >
+                <Shimmer title="GitHub Repo" />
+              </Link>
+            </div>
+          )}
           {id === 2 && <GlobeDemo />}
           {id === 3 && (
             <div className="flex gap-1 lg:gap-5 w-fit absolute -right-3 lg:-right-2">
@@ -131,7 +146,7 @@ export const BentoGridItem = ({
                 <span className="py-4 px-3 rounded-lg text-center bg-[#10132e]" />
               </div>
               <div className="flex flex-col gap-3 lg:gap-8">
-              <span className="py-4 px-3 rounded-lg text-center bg-[#10132e]" />
+                <span className="py-4 px-3 rounded-lg text-center bg-[#10132e]" />
 
                 {["Expo", "React Native", "Appwrite"].map((item) => (
                   <span
@@ -147,26 +162,40 @@ export const BentoGridItem = ({
 
           {id === 6 && (
             <div className="mt-5 relative">
-              <div className={`absolute -bottom-5 right-0`}> 
-                  <Lottie 
+              <div className={`absolute -bottom-5 right-0`}>
+                <Lottie
                   options={{
-                    loop:copied,
-                    autoplay:copied,
+                    loop: copied,
+                    autoplay: copied,
                     animationData,
-                    rendererSettings:{
-                      preserveAspectRatio: 'xMidYMid slice',
-                    }
+                    rendererSettings: {
+                      preserveAspectRatio: "xMidYMid slice",
+                    },
                   }}
-                  />
+                />
               </div>
-              <MagicButton 
-              title={copied ? 'Email copied' : 'Copy my email'}
-              icon={<IoCopyOutline/>}
-              otherClasses="!bg-[#161a31]"//when you want to override a css property use "!", I'm making this commet for myself to remember
-              handleClick={handleCopy}
-              position=""
+              <MagicButton
+                title={copied ? "Email copied" : "Copy my email"}
+                icon={<IoCopyOutline />}
+                otherClasses="!bg-[#161a31]" //when you want to override a css property use "!", I'm making this commet for myself to remember
+                handleClick={handleCopy}
+                position=""
               />
-              </div>
+            </div>
+          )}
+
+          {id === 1 && (
+            <div className="mt-5 relative">
+              <Link
+                className="relative w-full"
+                target="_blank"
+                href={
+                  "https://drive.google.com/file/d/1SENLf1fMAoN8dZyenV60sd9FryQjtfrt/view"
+                }
+              >
+                <Shimmer title="My CV" />
+              </Link>
+            </div>
           )}
         </div>
       </div>

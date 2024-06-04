@@ -28,9 +28,11 @@ const Hero = () => {
       </div>
         <div>
           <SparklesCore
-            className="w-[16%] h-[5%] top-2 left-12 md:top-44 mx-auto absolute"
+            className="w-[10%] h-[2%] top-2 left-12 md:top-44 mx-auto absolute"
             background="tranparent"
             particleColor="#666666"
+            speed={4}
+            particleDensity={69}
           />
         </div>
         <div className="flex justify-center relative my-20 z-10">
@@ -45,7 +47,7 @@ const Hero = () => {
             <p className="text-center md:tracking-wider mb-4 text-sm md:text-lg lg:text-2xl text-white tracking-wider">
               Hi,I&apos;m sakcham, a developer X designer based in India
             </p>
-            <a href="/about">
+            <a href="#projects">
               {" "}
               <MagicButton
                 icon={<FaLocationArrow />}

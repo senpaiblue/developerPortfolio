@@ -1,3 +1,5 @@
+import { link } from "fs";
+
 export const navItems = [
   { name: "About", link: "#about" },
   { name: "Projects", link: "#projects" },
@@ -8,7 +10,7 @@ export const navItems = [
 export const gridItems = [
   {
     id: 1,
-    title: "I prioritize client collaboration, fostering open communication ",
+    title: "Passionate about learning and creating innovative products",
     description: "",
     className: "lg:col-span-2 md:col-span-6 md:row-span-2 lg:min-h-[40vh]",
     imgClassName: "w-full h-full",
@@ -72,109 +74,74 @@ export const gridItems = [
 export const projects = [
   {
     id: 1,
-    title: "3D Solar System Planets to Explore",
-    des: "Explore the wonders of our solar system with this captivating 3D simulation of the planets using Three.js.",
+    title: "Cynthia's UniLaunchpad",
+    des: "A web-based platform that helps student to enroll into there dream university",
     img: "/p1.svg",
-    iconLists: ["/re.svg", "/tail.svg", "/ts.svg", "/three.svg", "/fm.svg"],
-    link: "https://github.com/adrianhajdin?tab=repositories",
+    iconLists: [ "/tail.svg", "/Figma.svg"],
+    link: "https://www.figma.com/design/qH6iDPJo4GPvbp72wKs0cJ/Cynthia-UniLaunchpad?node-id=0-1&t=vQHYhhdnNEWryZUS-1",
   },
   {
     id: 2,
-    title: "Yoom - Video Conferencing App",
-    des: "Simplify your video conferencing experience with Yoom. Seamlessly connect with colleagues and friends.",
+    title: "Voice Notes- Note making mobile app",
+    des: "Simplify your note making experience with Voice Notes.",
     img: "/p2.svg",
-    iconLists: ["/next.svg", "/tail.svg", "/ts.svg", "/stream.svg", "/c.svg"],
-    link: "https://github.com/adrianhajdin/zoom-clone",
+    iconLists: ["/re.svg", "/tail.svg", "/appwrite.svg", "/expo.svg"],
+    link: "https://github.com/senpaiblue/Voice-Note",
   },
   {
     id: 3,
-    title: "AI Image SaaS - Canva Application",
-    des: "A REAL Software-as-a-Service app with AI features and a payments and credits system using the latest tech stack.",
+    title: "Wish App",
+    des: "Designed and developed a price tracking app, which gives notifcation of price spikes",
     img: "/p3.svg",
-    iconLists: ["/re.svg", "/tail.svg", "/ts.svg", "/three.svg", "/c.svg"],
-    link: "https://github.com/adrianhajdin/ai_saas_app",
+    iconLists: ["/tail.svg", "/Figma.svg"],
+    link: "https://www.figma.com/design/R4gP20HlCtK4HqbeZRMgtY/cibi-UX-design?node-id=0-1&t=3KaBTxlqFJgWAJKO-1",
   },
   {
     id: 4,
-    title: "Animated Apple Iphone 3D Website",
-    des: "Recreated the Apple iPhone 15 Pro website, combining GSAP animations and Three.js 3D effects..",
+    title: "Pull Request Guide Chrome Extension",
+    des: "Developed a chrome extension that helps beginner read clearly the summary of a pull request.",
     img: "/p4.svg",
-    iconLists: ["/next.svg", "/tail.svg", "/ts.svg", "/three.svg", "/gsap.svg"],
-    link: "https://github.com/adrianhajdin/iphone",
+    iconLists: ["/re.svg", "/tail.svg",],
+    link: "https://github.com/MizuHorizon/PR-Guide-Extension",
   },
 ];
 
 export const testimonials = [
   {
     quote:
-      "Collaborating with Adrian was an absolute pleasure. His professionalism, promptness, and dedication to delivering exceptional results were evident throughout our project. Adrian's enthusiasm for every facet of development truly stands out. If you're seeking to elevate your website and elevate your brand, Adrian is the ideal partner.",
-    name: "Michael Johnson",
-    title: "Director of AlphaStream Technologies",
+      "Collaborating with Sakcham was an absolute pleasure. His professionalism, promptness, and dedication to delivering exceptional results were evident throughout our project. Sakcham's enthusiasm for every facet of development truly stands out. If you're seeking to elevate your website and elevate your brand, Sakcham is the ideal partner.",
+    name: "Cynthia",
+    title: "UniLaunchPad Founder",
+    image:"/cynthia.svg"
   },
   {
     quote:
-      "Collaborating with Adrian was an absolute pleasure. His professionalism, promptness, and dedication to delivering exceptional results were evident throughout our project. Adrian's enthusiasm for every facet of development truly stands out. If you're seeking to elevate your website and elevate your brand, Adrian is the ideal partner.",
-    name: "Michael Johnson",
-    title: "Director of AlphaStream Technologies",
+      "Working with Sakcham was a delightful experience. His unwavering professionalism, swift responses, and commitment to excellence were apparent from start to finish. Sakcham's passion for every aspect of development is remarkable. For those looking to enhance their website and brand, Sakcham is the perfect collaborator.",
+    name: "Manuel",
+    title: "CIBI CO-Founder",
+    image:"/manuel.svg"
   },
   {
     quote:
-      "Collaborating with Adrian was an absolute pleasure. His professionalism, promptness, and dedication to delivering exceptional results were evident throughout our project. Adrian's enthusiasm for every facet of development truly stands out. If you're seeking to elevate your website and elevate your brand, Adrian is the ideal partner.",
-    name: "Michael Johnson",
-    title: "Director of AlphaStream Technologies",
+      "Partnering with Sakcham was a joy. His dedication to professionalism, timely delivery, and outstanding results shone throughout our collaboration. Sakcham's excitement for all things development is truly impressive. If you want to boost your website and brand, Sakcham is the ideal choice.",
+    name: "Glint Ace",
+    title: "Void Strategies CO-Founder",
+    image:"/glint.svg"
   },
   {
     quote:
-      "Collaborating with Adrian was an absolute pleasure. His professionalism, promptness, and dedication to delivering exceptional results were evident throughout our project. Adrian's enthusiasm for every facet of development truly stands out. If you're seeking to elevate your website and elevate your brand, Adrian is the ideal partner.",
-    name: "Michael Johnson",
-    title: "Director of AlphaStream Technologies",
-  },
-  {
-    quote:
-      "Collaborating with Adrian was an absolute pleasure. His professionalism, promptness, and dedication to delivering exceptional results were evident throughout our project. Adrian's enthusiasm for every facet of development truly stands out. If you're seeking to elevate your website and elevate your brand, Adrian is the ideal partner.",
-    name: "Michael Johnson",
-    title: "Director of AlphaStream Technologies",
-  },
-];
-
-export const companies = [
-  {
-    id: 1,
-    name: "Next.js",
-    img: "/cloud.svg",
-    nameImg: "/cloudName.svg",
-  },
-  {
-    id: 2,
-    name: "appwrite",
-    img: "/app.svg",
-    nameImg: "/appName.svg",
-  },
-  {
-    id: 3,
-    name: "Figma",
-    img: "/host.svg",
-    nameImg: "/hostName.svg",
-  },
-  {
-    id: 4,
-    name: "React",
-    img: "/s.svg",
-    nameImg: "/streamName.svg",
-  },
-  {
-    id: 5,
-    name: "Expo",
-    img: "/dock.svg",
-    nameImg: "/dockerName.svg",
-  },
+      "It was a pleasure to collaborate with Sakcham. His exceptional professionalism, promptness, and focus on quality were clear throughout our project. Sakcham's zeal for development is particularly noteworthy. For anyone aiming to improve their website and brand presence, Sakcham is the go-to expert.",
+    name: "Mohit",
+    title: "Product Designer Under25",
+    image:"/mohit.svg"
+  }
 ];
 
 export const workExperience = [
   {
     id: 1,
-    title: "Frontend Engineer Intern",
-    desc: "Assisted in the development of a web-based platform using React.js, enhancing interactivity.",
+    title: "UI/UX intern at Cynthia",
+    desc: "Assisted in the development of a web-based platform using Figma, enhancing interactivity.",
     className: "md:col-span-2",
     thumbnail: "/exp1.svg",
   },
@@ -187,15 +154,15 @@ export const workExperience = [
   },
   {
     id: 3,
-    title: "UI/UX Intern",
-    desc: "Desgined UI for development team with good UX flows.",
+    title: "Frontend Developer Intern",
+    desc: "Assisted in the development of a web-based platform using Next.js enhancing interactivity. ",
     className: "md:col-span-2", // change to md:col-span-2
     thumbnail: "/exp3.svg",
   },
   {
     id: 4,
     title: "UX Intern",
-    desc: "Designed flows for the NYC based company. ",
+    desc: "Designed flows for the CIBI applicatiion, NYC based start Up. ",
     className: "md:col-span-2",
     thumbnail: "/exp4.svg",
   },
@@ -205,13 +172,17 @@ export const socialMedia = [
   {
     id: 1,
     img: "/git.svg",
+    link:"https://github.com/senpaiblue"
   },
   {
     id: 2,
     img: "/twit.svg",
+    link:"https://x.com/SakchamSingh07"
+
   },
   {
     id: 3,
     img: "/link.svg",
+    link:"https://www.linkedin.com/in/sakcham-singh-b45a7721a/"
   },
 ];
