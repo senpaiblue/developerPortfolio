@@ -32,7 +32,7 @@ const Hero = () => {
             background="tranparent"
             particleColor="#666666"
             speed={4}
-            particleDensity={69}
+            particleDensity={25}
           />
         </div>
         <div className="flex justify-center relative my-20 z-10">
