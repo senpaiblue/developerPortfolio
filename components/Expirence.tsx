@@ -8,7 +8,7 @@ const Expirence = () => {
     <div className="py-20" id="testimonials">
       <h1 className="heading">
         My <span className="text-purple">Work {""}</span>
-        Expirence
+        Experience
       </h1>
       <div className="flex flex-col items-center justify-center lg:mt-10"></div>
       <div className="w-full mt-12 grid lg:grid-cols-4 gid-cols-1 gap-10">
