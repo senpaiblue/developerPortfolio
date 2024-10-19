@@ -190,7 +190,7 @@ export const BentoGridItem = ({
                 className="relative w-full"
                 target="_blank"
                 href={
-                  "https://drive.google.com/file/d/1SENLf1fMAoN8dZyenV60sd9FryQjtfrt/view?usp=sharing"
+                  "https://drive.google.com/file/d/1IWSIldzstB8EmFfq0l7TJPn1a-I-sG4x/view?usp=sharing"
                 }
               >
                 <Shimmer title="My CV" />
